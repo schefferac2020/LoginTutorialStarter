@@ -11,7 +11,7 @@
         <!--Startup Screen View Controller-->
         <scene sceneID="HIp-lx-1BW">
             <objects>
-                <viewController id="46M-iv-QzU" userLabel="Startup Screen View Controller" customClass="StartupScreenViewController" customModule="MHacksMealPlanningApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="46M-iv-QzU" userLabel="Startup Screen View Controller" customClass="StartupScreenViewController" customModule="LoginTutorialStarter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pbx-8d-NUN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

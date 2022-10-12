@@ -1,0 +1,27 @@
+Steps For Firebase Login:
+
+	1. Register for firebase at https://firebase.google.com/
+	2. Create a project
+	3. Once created, go to the iOS thing
+	4. Download the plist
+	5. run "sudo gem install cocoapods" in terminal to install pods
+
+run "pod init"
+
+add the following to podfiles
+
+pod 'FirebaseAnalytics'
+pod 'FirebaseAuth'
+
+	6. run pod install
+
+	7. Open xcodeproject
+	8. In AppDelegate. Import FirebaseCore; 
+	9. DidLaunchWithOptions --> FirebaseApp.Configure()
+	10.Then Build the app
+
+	11. Now go to website and set up authentication with email and password
+
+	12. Create signup function which imports FirebaseAuth and FirebaseCore
+
+

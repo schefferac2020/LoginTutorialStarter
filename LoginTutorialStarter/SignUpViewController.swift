@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
@@ -19,13 +21,22 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func signUp(){
+        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) {(authResult, err) in
+            guard let user = authResult?.user, err == nil else{
+                print("ERROR: \(err?.localizedDescription)")
+                return;
+            }
+        }
+        self.performSegue(withIdentifier: "signupSegue", sender: self)
+    }
 
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         print("Name: \(nameField.text!)")
         print("Email: \(emailField.text!)")
         print("Password: \(passwordField.text!)")
-        self.performSegue(withIdentifier: "signupSegue", sender: self)
+        signUp()
     }
     
     @IBAction func dismissSignUp(_ sender: Any) {
